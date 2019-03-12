@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ToiletApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_join">Join toilet session</string>
+    <string name="button_create">Create toilet session</string>
+    <string name="test">Hello world</string>
+
+</resources>
