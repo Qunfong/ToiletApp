@@ -1,20 +1,14 @@
 package com.man.toiletapp;
 
 import android.os.Bundle;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
+import android.widget.GridView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,18 +16,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        LinearLayout layout = findViewById(R.id.content_session);
+        GridView gridView_content= findViewById(R.id.content_session);
+        SessionAdapter sessionAdapter = new SessionAdapter(this, getSessions());
+        gridView_content.setAdapter(sessionAdapter);
 
-//        RecyclerView recyclerView = findViewById(R.id.recyclerview_session);
-//        LinearLayoutManager llm = new LinearLayoutManager(this);
-//        llm.setOrientation(RecyclerView.HORIZONTAL);
-//        recyclerView.setLayoutManager(llm);
-
-        populateSessions(layout);
     }
 
-    private void populateSessions(LinearLayout layout) {
+    private Session[] getSessions() {
+        User[] users = {
+                new User("child1"),
+                new User("child2"),
+                new User("child3"),
+        };
 
+        return new Session[]{
+                new Session("name1", new User("name"), users),
+                new Session("name2", new User("name"), users),
+                new Session("name3", new User("name"), users),
+                new Session("name4", new User("name"), users),
+        };
     }
 
     @Override

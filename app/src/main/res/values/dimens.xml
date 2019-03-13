@@ -1,7 +1,8 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="button_main">200dp</dimen>
-    <dimen name="card_width">300dp</dimen>
-    <dimen name="card_height">300dp</dimen>
-
+    <dimen name="card_width">170dp</dimen>
+    <dimen name="card_height">150dp</dimen>
+    <dimen name="card_spacing">8dp</dimen>
+    <dimen name="layout_spacing">20dp</dimen>
 </resources>

@@ -1,38 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridview_sessions"
     android:orientation="vertical"
+    android:numColumns="2"
+    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="0dip"
-    android:layout_weight="1">
-    
-    <!--<androidx.recyclerview.widget.RecyclerView-->
-        <!--android:id="@+id/recyclerview_session"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent">-->
-        <!--<com.google.android.material.card.MaterialCardView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginLeft="@dimen/mtrl_card_spacing"-->
-            <!--android:layout_marginTop="@dimen/mtrl_card_spacing"-->
-            <!--android:layout_marginRight="@dimen/mtrl_card_spacing"-->
-            <!--android:minHeight="200dp">-->
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="@string/test"/>-->
-        <!--</com.google.android.material.card.MaterialCardView>-->
-    <!--</androidx.recyclerview.widget.RecyclerView>-->
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="@dimen/card_width"
-        android:layout_height="@dimen/card_height"
-        android:layout_marginLeft="@dimen/mtrl_card_spacing"
-        android:layout_marginTop="@dimen/mtrl_card_spacing"
-        android:layout_marginRight="@dimen/mtrl_card_spacing"
-        android:minHeight="200dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/test"/>
-    </com.google.android.material.card.MaterialCardView>
-</LinearLayout>
+    android:layout_weight="2"
+    android:verticalSpacing="@dimen/layout_spacing"
+    >
+
+</GridView>
